@@ -26,8 +26,48 @@
 and, or, not 세가지의 연산자가 있으며, 연산의 결과가 true 혹은 false 로 반환 된다.
 
 ### **instanceof**
+객체 타입을 확인하는데 사용한다. 속성은 이항연산자이고 형변환 가능여부를 true / false 로 반환한다.  
+주로 상속 관계에서 부모객체인지 자식객체인지 확인하는데 사용한다.
+
+```java
+public class InstanceofEx{
+	public static void main(String[] args){
+	A a = new A();
+	B b = new B();
+	
+	System.out.println(a instanceof A);
+	// true > a는 A객체이므로 형변환 가능
+	System.out.println(b instanceof A);
+	// true > b는 A의 자식객체이므로 형변환 가능
+
+	System.out.println(a instanceof B);
+	// false > a는 B의 부모객체이므로 형변환 불가능
+	System.out.println(b instanceof B);
+	// true > b는 B객체이므로 형변환 가능
+	}
+}
+
+class A{}
+class B extends A{}
+
+```
+<설명그림 추가>
+
 ### **assignment(=) operator**
+값을 변수에 할당할 때 쓰는 연산자
+<대입연산자? 할당연산자? 표 정리 추가>
+```java
+int a;
+a = 10;
+// a에 10을 할당
+a += 10;
+// a = a + 10;
+a -= 10;
+// a = a - 10;
+```
 ### **화살표(->) 연산자**
+람다표현식
+
 ### **3항 연산자**
 - 단항 연산자
 	- 대표적으로 부호연산자가 있다.
